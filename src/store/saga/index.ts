@@ -4,7 +4,7 @@ import { all, call, put, takeLatest } from 'redux-saga/effects'
 import { getUsersData, getUsersDataAfter } from '../actions';
 
 
-const getUsers = () => axios.get(`${process.env.REACT_APP_URL}/`);
+const getUsers = () => axios.get("https://jsonplaceholder.typicode.com/users");
 
 function* getUsersSaga() {
     try {
