@@ -1,4 +1,4 @@
-import { GET_USERS_SUCCESS, GET_USERS_SUCCESS_AFTER } from '../types/index';
+import { GET_USERS, GET_USERS_SUCCESS } from '../types/index';
 const initialState = {
     users: [],
     isLoadung: false,
@@ -8,10 +8,10 @@ const initialState = {
 
 const usersReducer = (state = initialState, actions: any) => {
     switch (actions.type) {
+        case GET_USERS:
+            return { ...state, isLoadung: true }
         case GET_USERS_SUCCESS:
-            return { ...state, users: actions.payload }
-        case GET_USERS_SUCCESS_AFTER:
-            return { ...state, isLoadung: actions.payload }
+            return { ...state, isLoadung: false,  users: actions.payload}
         default:
             return state;
     }

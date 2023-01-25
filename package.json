@@ -1,6 +1,5 @@
 {
   "name": "redux-boilerplate-v3",
-  "homepage": "http://jkniaziii.github.io/redux-saga-boilerplate",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

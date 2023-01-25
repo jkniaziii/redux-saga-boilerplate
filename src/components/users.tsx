@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react'
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import { getUsers } from '../store/actions';
 
 const Users = (props: any) => {
@@ -9,7 +8,6 @@ const Users = (props: any) => {
   return (
     <Fragment>
     <h3>users</h3>
-    <Link to='/'>HOME</Link><br/><br/><br/>
     <button onClick={()=>getUsers()}>GET USERS</button>
     {loading ? <h1>LOADING ----</h1> :
     users.length ? users.slice(0,2).map((user: any)=>(<div>{user.name}</div>)):''}

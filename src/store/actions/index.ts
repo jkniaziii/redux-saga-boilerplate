@@ -1,4 +1,4 @@
-import { INCREMENT, DECREMENT, ADD_NUMBER, GET_USERS, GET_USERS_SUCCESS, GET_USERS_SUCCESS_AFTER } from '../types/index';
+import { INCREMENT, DECREMENT, ADD_NUMBER, GET_USERS, GET_USERS_SUCCESS } from '../types/index';
 
 
 export const incrementer = () => {
@@ -33,10 +33,4 @@ export const getUsersData = (data: any) => {
     };
   };
 
-  export const getUsersDataAfter = (data: any) => {
-    return {
-      type: GET_USERS_SUCCESS_AFTER,
-      payload: data
-    };
-  };
   
